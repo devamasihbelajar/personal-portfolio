@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/2794c4cddb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!---------------Hero Section---------------->
+
+    <section id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#header">
+                    <img src="images/logo2.png" class="logo">
+                </a>
+                <ul id="sidebar">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Lucky Deva</span><br> Imanuel Tendean</h1>
+                <p>Mahasiswa Departemen Sistem Informasi UISI</p>
+            </div>
+        </div>
+    </section>
+
+    <!--------------about---------------->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/gw1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <br>
+                    <p class="para1">
+                        Saya seorang undergraduate dari Universitas Internasional Semen Indonesia Departemen Sistem
+                        Informasi.
+                        Memiliki kemampuan Kreatif membuat saya terbiasa membuat desain Poster, Twibbon, Feed Instagram.
+                    </p>
+                    <p class="para2">
+                        Saya dapat bekerja sama dengan tim, dapat bekerja dibawah tekanan dan mampu menerima wawasan
+                        serta pengalaman baru. Saya juga memungkinkan diri untuk menerima tantangan dan beradaptasi
+                        dengan lingkungan yang baru.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Anggota HIMA Sistem Informasi</span><br> Divisi Kewirausahaan </li>
+                            <li><span>Panitia PKKMB Karsatera 2023</span><br> Divisi Perlengkapan </li>
+                            <li><span>Panitia LKKM Pra TD</span><br> Divisi Perlengkapan </li>
+                            <li><span>Panitia LKMM TD</span><br> Divisi Perlengkapan </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Sekarang</span><br> Universitas Internasional Semen Indonesia <br> Program
+                                Studi Sistem Informasi </li>
+                            <li><span>2018 - 2021</span><br> SMA Negeri 6 HALUT </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------Project------------------->
+
+    <section id="project">
+        <div class="container">
+            <h1 class="sub-title">Project</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/cafe1.jpg">
+                    <div class="layer">
+                        <h3>Aplikasi Pemesanan</h3>
+                        <p>Aplikasi untuk melakukan pemesanan menu disebuah restoran untuk mata kuliah Pemrograman
+                            Berbasis Objek </p>
+                        <a href="https://github.com/devamasihbelajar/AplikasiPemesanan/tree/master"><i
+                                class="fas fa-external-link-alt"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/redesign.png">
+                    <div class="layer">
+                        <h3>Redesign Masterpiece UISI</h3>
+                        <p>Hasil Re-design website Masterpiece UISI untuk mata kuliah Desain Pengalaman Pengguna</p>
+                        <a href="https://medium.com/@lucky.tendean22/final-semester-exam-273545d9ee94"><i
+                                class="fas fa-external-link-alt"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------------contact--------------------->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>luckydevthendean@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>0819 9776 5903</p>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/loptaroooo/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/lucky-tendean"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form <form action="send_email.php" method="POST">
+                        <input type="hidden" name="access_key" value="6800094c-154f-486a-825f-0965638eca95">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="text" name="Subject" placeholder="Subject" required>
+                        <textarea name="Massage" rows="6" placeholder="Your Massage"></textarea>
+                        <button type="submit" class="tombol">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        document.getElementById("experience").classList.add("active-tab");
+        document.querySelector(".tab-links.active-links").classList.add("active-link");
+
+        function opentab(tabname) {
+            for (const tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+            for (const tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            event.currentTarget.classList.add("active-link");
+        }
+    </script>
+
+    <script>
+        var sidbar = document.getElementById("sidebar");
+
+        function openmenu() {
+            sidbar.style.right = "0";
+        }
+
+        function closemenu() {
+            sidbar.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
